@@ -1,0 +1,15 @@
+name: Daily Site Check
+on:
+  schedule:
+    - cron: '0 8 * * *' # Runs at 8:00 AM every day
+  workflow_dispatch: # Allows you to also run it manually with a button click
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+      - run: npm install
+      - run: npx playwright install --with-deps
+      - run: npx playwright test
