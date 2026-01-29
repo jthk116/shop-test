@@ -7,6 +7,6 @@ test('test', async ({ page }) => {
   await page.getByRole('link', { name: 'Bar & Counter Stools', exact: true }).click();
   await page.getByRole('button', { name: 'add to cart' }).first().click();
   await page.getByRole('button', { name: 'ADD TO CART', exact: true }).click();
-  await page.getByRole('button', { name: 'Checkout' }).click();
+  await page.getByRole('button', { name: 'CHECKOUT' }).click();
   await expect(page).toHaveURL(/.*checkout/);
 });
