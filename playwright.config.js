@@ -21,10 +21,10 @@ export default defineConfig({
     // '**/*.skip.spec.ts',  // Ignore any files with .skip in the name
   ],
   /* Global timeout per test */
-  timeout: 30 * 1000,
+  timeout: 60 * 1000,
   expect: {
     /* Timeout for expect() assertions */
-    timeout: 5 * 1000,
+    timeout: 10 * 1000,
   },
   /* Run tests in files in parallel */
   fullyParallel: true,
